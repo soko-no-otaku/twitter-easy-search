@@ -92,9 +92,20 @@ function App() {
           <MuiPickersUtilsProvider utils={DateFnsUtils}>
             <KeyboardDatePicker
               margin="normal"
-              id="date-picker-dialog"
-              label="Date picker dialog"
-              format="MM/dd/yyyy"
+              id="since"
+              label="Since"
+              format="yyyy-MM-dd"
+              value={selectedDate}
+              onChange={handleDateChange}
+              KeyboardButtonProps={{
+                'aria-label': 'change date',
+              }}
+            />
+            <KeyboardDatePicker
+              margin="normal"
+              id="until"
+              label="Until"
+              format="yyyy-MM-dd"
               value={selectedDate}
               onChange={handleDateChange}
               KeyboardButtonProps={{
