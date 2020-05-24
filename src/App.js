@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
 function App() {
   const classes = useStyles();
 
-  const [selectedDate, setSelectedDate] = React.useState(new Date('2014-08-18T21:11:54'));
+  const [selectedDate, setSelectedDate] = React.useState(new Date());
   const handleDateChange = (date) => {
     setSelectedDate(date);
   };
@@ -100,6 +100,7 @@ function App() {
               fullWidth
               id="since"
               label="Since"
+              name="since"
               format="yyyy-MM-dd"
               value={selectedDate}
               onChange={handleDateChange}
@@ -112,6 +113,7 @@ function App() {
               fullWidth
               id="until"
               label="Until"
+              name="until"
               format="yyyy-MM-dd"
               value={selectedDate}
               onChange={handleDateChange}
@@ -120,6 +122,16 @@ function App() {
               }}
             />
           </MuiPickersUtilsProvider>
+          <TextField
+            variant="outlined"
+            margin="normal"
+            fullWidth
+            value={`${inputKeyword} ${selectedDate}`}
+            id="query"
+            label="Query"
+            name="query"
+            disabled
+          />
           <Button
             type="submit"
             fullWidth
