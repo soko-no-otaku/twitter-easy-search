@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/twitter-easy-search/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/twitter-easy-search/static/js/main.83e7dff6.chunk.js",
+    "main.js.map": "/twitter-easy-search/static/js/main.83e7dff6.chunk.js.map",
+    "runtime-main.js": "/twitter-easy-search/static/js/runtime-main.d369af9c.js",
+    "runtime-main.js.map": "/twitter-easy-search/static/js/runtime-main.d369af9c.js.map",
+    "static/js/2.70b0bf02.chunk.js": "/twitter-easy-search/static/js/2.70b0bf02.chunk.js",
+    "static/js/2.70b0bf02.chunk.js.map": "/twitter-easy-search/static/js/2.70b0bf02.chunk.js.map",
+    "index.html": "/twitter-easy-search/index.html",
+    "precache-manifest.5b1bc182a15472bf1b0ced80ed3879ac.js": "/twitter-easy-search/precache-manifest.5b1bc182a15472bf1b0ced80ed3879ac.js",
+    "service-worker.js": "/twitter-easy-search/service-worker.js",
+    "static/css/main.5ecd60fb.chunk.css.map": "/twitter-easy-search/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.70b0bf02.chunk.js.LICENSE.txt": "/twitter-easy-search/static/js/2.70b0bf02.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d369af9c.js",
+    "static/js/2.70b0bf02.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.83e7dff6.chunk.js"
+  ]
+}
