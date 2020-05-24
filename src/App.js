@@ -53,9 +53,13 @@ function App() {
   const classes = useStyles();
 
   const [selectedDate, setSelectedDate] = React.useState(new Date('2014-08-18T21:11:54'));
-
   const handleDateChange = (date) => {
     setSelectedDate(date);
+  };
+
+  const [inputKeyword, setInputKeyword] = React.useState('');
+  const handleKeywordChange = (event) => {
+    setInputKeyword(event.target.value);
   };
 
   return (
@@ -73,25 +77,27 @@ function App() {
             variant="outlined"
             margin="normal"
             fullWidth
-            id="email"
-            label="Email Address"
-            name="email"
-            autoComplete="email"
+            value={inputKeyword}
+            onChange={handleKeywordChange}
+            id="keyword"
+            label="Keyword"
+            name="keyword"
             autoFocus
           />
           <TextField
             variant="outlined"
             margin="normal"
             fullWidth
+            value={inputKeyword}
+            onChange={handleKeywordChange}
             name="password"
             label="Password"
-            type="password"
             id="password"
-            autoComplete="current-password"
           />
           <MuiPickersUtilsProvider utils={DateFnsUtils}>
             <KeyboardDatePicker
               margin="normal"
+              fullWidth
               id="since"
               label="Since"
               format="yyyy-MM-dd"
@@ -103,6 +109,7 @@ function App() {
             />
             <KeyboardDatePicker
               margin="normal"
+              fullWidth
               id="until"
               label="Until"
               format="yyyy-MM-dd"
