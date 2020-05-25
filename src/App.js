@@ -10,6 +10,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import InputAdornment from '@material-ui/core/InputAdornment';
+import format from 'date-fns/format';
 import 'date-fns';
 import DateFnsUtils from '@date-io/date-fns';
 import {
@@ -63,6 +64,11 @@ function App() {
     setInputKeyword(event.target.value);
   };
 
+  const [inputUsername, setInputUsername] = React.useState('');
+  const handleUsernameChange = (event) => {
+    setInputUsername(event.target.value);
+  };
+
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
@@ -89,8 +95,8 @@ function App() {
             variant="outlined"
             margin="normal"
             fullWidth
-            value={inputKeyword}
-            onChange={handleKeywordChange}
+            value={inputUsername}
+            onChange={handleUsernameChange}
             id="username"
             label="Username"
             name="username"
@@ -130,7 +136,7 @@ function App() {
             variant="outlined"
             margin="normal"
             fullWidth
-            value={`${inputKeyword} ${selectedDate}`}
+            value={`${inputKeyword} from:${inputUsername} ${format(selectedDate, "yyyy-MM-dd")}`}
             id="query"
             label="Query"
             name="query"
