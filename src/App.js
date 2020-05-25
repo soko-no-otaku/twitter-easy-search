@@ -9,6 +9,7 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import InputAdornment from '@material-ui/core/InputAdornment';
 import 'date-fns';
 import DateFnsUtils from '@date-io/date-fns';
 import {
@@ -90,9 +91,12 @@ function App() {
             fullWidth
             value={inputKeyword}
             onChange={handleKeywordChange}
-            name="password"
-            label="Password"
-            id="password"
+            id="username"
+            label="Username"
+            name="username"
+            InputProps={{
+              startAdornment: <InputAdornment position="start">@</InputAdornment>,
+            }}
           />
           <MuiPickersUtilsProvider utils={DateFnsUtils}>
             <KeyboardDatePicker
