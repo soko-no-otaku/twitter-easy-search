@@ -84,7 +84,7 @@ function App() {
         <Typography component="h1" variant="h5">
           Search
         </Typography>
-        <form className={classes.form} noValidate>
+        <form action="https://twitter.com/search" className={classes.form} noValidate>
           <TextField
             variant="outlined"
             margin="normal"
