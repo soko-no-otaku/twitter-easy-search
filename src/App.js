@@ -93,7 +93,6 @@ function App() {
             onChange={handleKeywordChange}
             id="keyword"
             label="Keyword"
-            name="keyword"
             autoFocus
           />
           <TextField
@@ -104,7 +103,6 @@ function App() {
             onChange={handleUsernameChange}
             id="username"
             label="Username"
-            name="username"
             InputProps={{
               startAdornment: <InputAdornment position="start">@</InputAdornment>,
             }}
@@ -115,7 +113,6 @@ function App() {
               fullWidth
               id="since"
               label="Since"
-              name="since"
               format="yyyy-MM-dd"
               value={selectedSinceDate}
               onChange={handleSinceDateChange}
@@ -128,7 +125,6 @@ function App() {
               fullWidth
               id="until"
               label="Until"
-              name="until"
               format="yyyy-MM-dd"
               value={selectedUntilDate}
               onChange={handleUntilDateChange}
@@ -144,8 +140,7 @@ function App() {
             value={`${inputKeyword} from:${inputUsername} since:${format(selectedSinceDate, "yyyy-MM-dd")} until:${format(selectedUntilDate, "yyyy-MM-dd")}`}
             id="query"
             label="Query"
-            name="query"
-            disabled
+            name="q"
           />
           <Button
             type="submit"
