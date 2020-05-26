@@ -54,11 +54,6 @@ const useStyles = makeStyles((theme) => ({
 function App() {
   const classes = useStyles();
 
-  const [selectedDate, setSelectedDate] = React.useState(new Date());
-  const handleDateChange = (date) => {
-    setSelectedDate(date);
-  };
-
   const [inputKeyword, setInputKeyword] = React.useState('');
   const handleKeywordChange = (event) => {
     setInputKeyword(event.target.value);
@@ -67,6 +62,16 @@ function App() {
   const [inputUsername, setInputUsername] = React.useState('');
   const handleUsernameChange = (event) => {
     setInputUsername(event.target.value);
+  };
+
+  const [selectedSinceDate, setSelectedSinceDate] = React.useState(new Date());
+  const handleSinceDateChange = (date) => {
+    setSelectedSinceDate(date);
+  };
+
+  const [selectedUntilDate, setSelectedUntilDate] = React.useState(new Date());
+  const handleUntilDateChange = (date) => {
+    setSelectedUntilDate(date);
   };
 
   return (
@@ -112,8 +117,8 @@ function App() {
               label="Since"
               name="since"
               format="yyyy-MM-dd"
-              value={selectedDate}
-              onChange={handleDateChange}
+              value={selectedSinceDate}
+              onChange={handleSinceDateChange}
               KeyboardButtonProps={{
                 'aria-label': 'change date',
               }}
@@ -125,8 +130,8 @@ function App() {
               label="Until"
               name="until"
               format="yyyy-MM-dd"
-              value={selectedDate}
-              onChange={handleDateChange}
+              value={selectedUntilDate}
+              onChange={handleUntilDateChange}
               KeyboardButtonProps={{
                 'aria-label': 'change date',
               }}
@@ -136,7 +141,7 @@ function App() {
             variant="outlined"
             margin="normal"
             fullWidth
-            value={`${inputKeyword} from:${inputUsername} ${format(selectedDate, "yyyy-MM-dd")}`}
+            value={`${inputKeyword} from:${inputUsername} since:${format(selectedSinceDate, "yyyy-MM-dd")} until:${format(selectedUntilDate, "yyyy-MM-dd")}`}
             id="query"
             label="Query"
             name="query"
