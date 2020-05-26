@@ -15,7 +15,7 @@ import 'date-fns';
 import DateFnsUtils from '@date-io/date-fns';
 import {
   MuiPickersUtilsProvider,
-  KeyboardDatePicker,
+  DatePicker,
 } from '@material-ui/pickers';
 
 function Copyright() {
@@ -110,7 +110,7 @@ function App() {
             }}
           />
           <MuiPickersUtilsProvider utils={DateFnsUtils}>
-            <KeyboardDatePicker
+            <DatePicker
               margin="normal"
               fullWidth
               id="since"
@@ -123,7 +123,7 @@ function App() {
                 'aria-label': 'change date',
               }}
             />
-            <KeyboardDatePicker
+            <DatePicker
               margin="normal"
               fullWidth
               id="until"
