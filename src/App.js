@@ -137,7 +137,7 @@ function App() {
             variant="outlined"
             margin="normal"
             fullWidth
-            value={`${inputKeyword} from:${inputUsername} since:${format(selectedSinceDate, "yyyy-MM-dd")} until:${format(selectedUntilDate, "yyyy-MM-dd")}`}
+            value={`${inputKeyword} from:${inputUsername} since:${format(selectedSinceDate, "yyyy-MM-dd")}_00:00:00_JST until:${format(selectedUntilDate, "yyyy-MM-dd")}_23:59:59_JST`}
             id="query"
             label="Query"
             name="q"
